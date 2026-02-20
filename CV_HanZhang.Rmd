@@ -1,16 +1,9 @@
 ---
 name: Lily
 surname: Botha
-position: "Assistant Research Scientist"
-address: "University of Michigan Transportation Research Institute"
-www: hanzhang.cv
-email: "hanzh@umich.edu"
-#to get the orcid: 0000-0001-6087-0428
-googlescholar: ujW-lXkAAAAJ
-osf: nrtbk # currently vitae doesn't support osf in the yaml header, need to add \osf{nrtbk} in the .tex file manulaly
-github: HanZhang-psych
-# twitter: \_HanZhang_
-#researchgate: Han_Zhang175
+email: "bothlg22@wfu.edu"
+phone: "(404) 989-2853"
+github: lilygb3
 headcolor: 414141 # use black color
 date: "`r format(Sys.time(), '%B %Y')`"
 csl: apa-cv.csl # change this if you want to use other citation styles
@@ -175,9 +168,7 @@ tribble(
   ) 
 ```
 
-
 # Teaching and Mentoring Experience
-
 
 # References
 
