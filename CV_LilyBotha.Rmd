@@ -31,8 +31,11 @@ tribble(
   ~ Year,
   ~ Institution,
   "Bachelor of Arts, Psychology",
-  "08/2022-05/2026",
+  "08/2022 - 05/2026",
   "Wake Forest University",
+  NA,
+  "08/2024 - 12/2024",
+  "Danish Institute of Study Abroad"
 ) %>%
   detailed_entries(
     with = Degree,
@@ -40,9 +43,6 @@ tribble(
     what = Institution
   )
 ```
-
-
-
 
 
 # Employment
