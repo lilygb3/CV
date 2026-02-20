@@ -21,49 +21,86 @@ library(vitae);library(tibble)
 
 # Research Interests
 
-Impact of trauma on memory; Military and veteran mental health; Psychedelic-assisted therapy for PTSD
+Impact of trauma on memory; Post-traumatic stress disorder (PTSD), Military and veteran mental health; Psychedelic-assisted therapy
 
 # Education
 
 ```{r}
 tribble(
-  ~ Degree,
-  ~ Year,
-  ~ Institution,
-  "Bachelor of Arts, Psychology",
-  "08/2022 - 05/2026",
+  ~with, ~where, ~what, ~when, ~why,
+  
   "Wake Forest University",
+  "Winston-Salem, NC",
+  "Bachelor of Arts in Psychology",
+  "Expected May 2026",
+  "GPA: 3.69 | Dean’s List",
+  
+  "Danish Institute for Study Abroad (DIS)",
+  "Copenhagen, Denmark",
   NA,
-  "08/2024 - 12/2024",
-  "Danish Institute of Study Abroad"
+  "Fall 2024",
+  "Coursework in well-being psychology and the cognitive psychology of decision-making."
 ) %>%
   detailed_entries(
-    with = Degree,
-    where = Year,
-    what = Institution
+    with  = with,
+    where = where,
+    what  = what,
+    when  = when,
+    why   = why
   )
 ```
 
-
-# Employment
+# Research Experience
 
 ```{r}
 tribble(
-  ~ Position,
-  ~ Year,
-  ~ Institution,
-  "Assistant Research Scientist",
-  "06/2025-present",
-  "University of Michigan Transportation Research Institute",
-  "Postdoctoral Research Fellow",
-  "06/2020-06/2025",
-  "Department of Psychology, University of Michigan",
+  ~with, ~where, ~when, ~why,
+  
+  "Research Assistant",
+  "Emotional Adaptation & Psychophysiology Lab, Wake Forest University (PI: Christian Waugh, PhD)",
+  "Summer 2025 – Present",
+  "Cleaned, analyzed, and visualized behavioral and survey data in R, Excel, and Qualtrics for reinforcement-learning and emotional reappraisal studies; developed custom R scripts to reconstruct missing log-file data; designed experimental stimuli in Photoshop and trained research assistants; administered affective working-memory protocols and maintained participant tracking logs.",
+  
+  "Research Assistant",
+  "Growth Initiative Lab, Wake Forest University (PI: Eranda Jayawickreme, PhD)",
+  "Spring 2024 – Present",
+  "Screened interview transcripts and coded themes for a study on pluralism in Sri Lanka; screened ~5,900 articles for a meta-synthesis on post-traumatic growth; applied inclusion/exclusion criteria and maintained structured coding logs.",
+  
+  "Research Assistant",
+  "School of Law, Wake Forest University (PI: Gregory Parks, JD, PhD)",
+  "Summer 2025 – Fall 2025",
+  "Conducted systematic literature reviews on fraternities, race, and law; co-authored research memos synthesizing findings on bystander intervention and group cohesion."
 ) %>%
-  detailed_entries(
-    with = Position,
-    where = Year,
-    what = Institution
-  )
+  detailed_entries(with = with, where = where, when = when, why = why)
+```
+
+# Relevant Professional Experience
+
+```{r}
+tribble(
+  ~with, ~where, ~when, ~why,
+  
+  "Tutor",
+  "Student-Athlete Services, Wake Forest University",
+  "Fall 2025 – Present",
+  "Provided one-on-one philosophy tutoring; supported study strategies, time management, and academic progress monitoring.",
+  
+  "Swim Instructor",
+  "Wake Forest University & Life Time Inc.",
+  "Spring 2021 – Present",
+  "Designed individualized lesson plans; coached youth swim teams and coordinated meets; delivered adaptive instruction for individuals with autism, Down syndrome, cerebral palsy, and behavioral disabilities.",
+  
+  "Lifeguard",
+  "Wake Forest University & Life Time Inc.",
+  "Spring 2020 – Present",
+  "Responded to emergencies and maintained safety protocols; provided professional customer service.",
+  
+  "Aquatics Supervisor",
+  "Life Time Inc.",
+  "Summer 2024 – Fall 2024",
+  "Supervised and trained 40+ lifeguards and instructors; coordinated scheduling and daily operations."
+) %>%
+  detailed_entries(with = with, where = where, when = when, why = why)
 ```
 
 # Awards and Grants
