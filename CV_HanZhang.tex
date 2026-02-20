@@ -1,0 +1,189 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+%
+% Adapted to be an Rmarkdown template by Mitchell O'Hara-Wild
+% 23 November 2018
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt,a4paper,]{awesome-cv}
+
+% Configure page margins with geometry
+\usepackage{geometry}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+
+\definecolor{awesome}{HTML}{414141}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\def\endfirstpage{\newpage}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+
+\name{Lily}{Botha}
+
+\position{Assistant Research Scientist}
+\address{University of Michigan Transportation Research Institute}
+
+\email{\href{mailto:hanzh@umich.edu}{\nolinkurl{hanzh@umich.edu}}}
+\homepage{hanzhang.cv}
+\googlescholar{ujW-lXkAAAAJ}
+\github{HanZhang-psych}
+
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \skype{skype-id}
+% \reddit{reddit-id}
+
+
+\usepackage{booktabs}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%------------------------------------------------------------------------------
+
+
+
+% Pandoc CSL macros
+
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+% 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
+\makecvfooter
+  {February 2026}
+    {Lily Botha~~~·~~~Curriculum Vitae}
+  {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%------------------------------------------------------------------------------
+
+
+
+\section{Research Interests}\label{research-interests}
+
+Attention; Cognitive Control; Distraction; Driver Behavior
+
+\section{Employment}\label{employment}
+
+\begin{cventries}
+    \cventry{University of Michigan Transportation Research Institute}{Assistant Research Scientist}{06/2025-present}{}{}\vspace{-4.0mm}
+    \cventry{Department of Psychology, University of Michigan}{Postdoctoral Research Fellow}{06/2020-06/2025}{}{}\vspace{-4.0mm}
+\end{cventries}
+
+\section{Education}\label{education}
+
+\begin{cventries}
+    \cventry{University of Michigan}{Doctor of Philosophy, Education and Psychology}{09/2014-05/2020}{}{\begin{cvitems}
+\item Dissertation: Mind-wandering: What Can We Learn from Eye Movements?
+\end{cvitems}}
+    \cventry{University of Michigan}{Master of Science, Psychology}{09/2014-04/2018}{}{}\vspace{-4.0mm}
+    \cventry{Beijing Normal University}{Bachelor of Science, Psychology}{09/2010-07/2014}{}{}\vspace{-4.0mm}
+\end{cventries}
+
+\section{Awards and Grants}\label{awards-and-grants}
+
+\begin{cventries}
+    \cventry{UMTRI \& Mcity Integration Fund, University of Michigan}{Understanding Takeover Performance in Urgent Situations during Level-3 Driving}{2025}{\$99,971}{\begin{cvitems}
+\item Role: PI
+\end{cvitems}}
+\end{cventries}
+
+\subsection{As Postdoc}\label{as-postdoc}
+
+\begin{cventries}
+    \cventry{Standard Grant, National Science Foundation}{Probing Attentional Allocation with a Novel Forced-Response Method}{2023}{\$659,877}{\begin{cvitems}
+\item Role: Key Personnel (Postdoc)
+\end{cvitems}}
+    \cventry{R21, National Institute of Mental Health}{Investigating Interference-Control in ADHD Using a Novel Forced-Response Method}{2023}{\$429,000}{\begin{cvitems}
+\item Role: Key Personnel (Postdoc)
+\end{cvitems}}
+\end{cventries}
+
+\subsection{As Graduate Student}\label{as-graduate-student}
+
+\begin{cventries}
+    \cventry{School of Education, University of Michigan}{Stanley E. and Ruth B. Dimond Best Dissertation Award}{2020}{\$500}{\begin{cvitems}
+\item Dissertation: Mind-wandering: What Can We Learn from Eye Movements?
+\end{cvitems}}
+    \cventry{Midwestern Psychological Association Annual Meeting}{MPA Graduate Student Paper Award}{2020}{\$300}{\begin{cvitems}
+\item Scan-paths of mind-wandering during real-world scene perception
+\end{cvitems}}
+    \cventry{School of Education, University of Michigan}{ProQuest Distinguished Dissertation Award (Nomination)}{2020}{}{}\vspace{-4.0mm}
+    \cventry{Rackham Graduate School, University of Michigan}{Rackham One-Term Dissertation Fellowship}{2019}{\$17417}{}\vspace{-4.0mm}
+    \cventry{Rackham Graduate School, University of Michigan}{Rackham Graduate Student Research Grant}{2019}{\$3000}{}\vspace{-4.0mm}
+    \cventry{Rackham Graduate School, University of Michigan}{Rackham Conference Travel Grant}{2019, 2018, 2017}{\$1050}{}\vspace{-4.0mm}
+    \cventry{Rackham Graduate School, University of Michigan}{Rackham Summer Training Award}{2018}{\$3700}{}\vspace{-4.0mm}
+    \cventry{School of Education, University of Michigan}{Professor \& Mrs. Cho-Yee To Travel Grant}{2017, 2015}{\$500}{}\vspace{-4.0mm}
+\end{cventries}
+
+\subsection{As Undergraduate Student}\label{as-undergraduate-student}
+
+\begin{cventries}
+    \cventry{Ministry of Education of the People's Republic of China}{China National Scholarship}{2014}{\$1500}{}\vspace{-4.0mm}
+    \cventry{Faculty of Psychology, Beijing Normal University}{The First Rank Academic Scholarship}{2014, 2013}{\$300}{}\vspace{-4.0mm}
+    \cventry{Beijing Municipal Commission of Education}{Beijing Student Research and Entrepreneurial Action Plan}{2013}{\$1500}{}\vspace{-4.0mm}
+    \cventry{Faculty of Psychology, Beijing Normal University}{Undergraduate Student Research Grant}{2012}{\$280}{}\vspace{-4.0mm}
+\end{cventries}
+
+\section{Teaching and Mentoring
+Experience}\label{teaching-and-mentoring-experience}
+
+\section{References}\label{references}
+
+\begin{cventries}
+    \cventry{Edward E. Smith Professor of Psychology and Neuroscience; Co-Director, functional MRI Center, University of Michigan}{John Jonides, Ph.D.}{jjonides@umich.edu}{}{}\vspace{-4.0mm}
+    \cventry{Assistant Professor of Psychology, University of Michigan}{Taraz G. Lee, Ph.D.}{tarazlee@umich.edu}{}{}\vspace{-4.0mm}
+    \cventry{Department Chair, Arthur Thurnau Professor of Psychology, Education, and Information, University of Michigan}{Priti Shah, Ph.D.}{priti@umich.edu}{}{}\vspace{-4.0mm}
+    \cventry{Professor of Psychology and Education, University of Michigan}{Kevin F. Miller, Ph.D.}{kevinmil@umich.edu}{}{}\vspace{-4.0mm}
+\end{cventries}
+
+
+
+\end{document}
