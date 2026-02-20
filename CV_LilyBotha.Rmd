@@ -21,7 +21,29 @@ library(vitae);library(tibble)
 
 # Research Interests
 
-Attention; Cognitive Control; Distraction; Driver Behavior
+Impact of trauma on memory; Military and veteran mental health; Psychedelic-assisted therapy for PTSD
+
+# Education
+
+```{r}
+tribble(
+  ~ Degree,
+  ~ Year,
+  ~ Institution,
+  "Bachelor of Arts, Psychology",
+  "08/2022-05/2026",
+  "Wake Forest University",
+) %>%
+  detailed_entries(
+    with = Degree,
+    where = Year,
+    what = Institution
+  )
+```
+
+
+
+
 
 # Employment
 
@@ -41,35 +63,6 @@ tribble(
     with = Position,
     where = Year,
     what = Institution
-  )
-```
-
-# Education
-
-```{r}
-tribble(
-  ~ Degree,
-  ~ Advisor,
-  ~ Year,
-  ~ Institution,
-  "Doctor of Philosophy, Education and Psychology",
-  "Dissertation: Mind-wandering: What Can We Learn from Eye Movements?",
-  "09/2014-05/2020",
-  "University of Michigan",
-  "Master of Science, Psychology",
-  NA,
-  "09/2014-04/2018",
-  "University of Michigan",
-  "Bachelor of Science, Psychology",
-  NA,
-  "09/2010-07/2014",
-  "Beijing Normal University",
-) %>%
-  detailed_entries(
-    with = Degree,
-    where = Year,
-    what = Institution,
-    why = Advisor
   )
 ```
 
