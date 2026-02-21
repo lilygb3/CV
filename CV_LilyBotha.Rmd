@@ -15,212 +15,211 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
-library(vitae);library(tibble)
-#rmarkdown::pandoc_version()
+
+library(vitae)
+library(tibble)
+library(magrittr)
+
+bullets <- function(...) {
+  x <- unlist(list(...))
+  x <- x[!is.na(x) & nzchar(x)]
+  
+  tibble::tibble(what = x) %>%
+    vitae::brief_entries(what = what)
+}
 ```
 
-# Research Interests
+# RESEARCH INTERESTS
 
-Impact of trauma on memory; Post-traumatic stress disorder (PTSD), Military and veteran mental health; Psychedelic-assisted therapy
+```{r}
+bullets(
+  "Post-traumatic stress disorder (PTSD)",
+  "Trauma-related memory processes",
+  "Emotion regulation",
+  "Social and interpersonal mechanisms of trauma recovery",
+  "Psychedelic-assisted interventions",
+  "Military and veteran mental health"
+)
+```
 
-# Education
+# EDUCATION
 
 ```{r}
 tribble(
-  ~with, ~where, ~what, ~when, ~why,
-  
+  ~date, ~degree, ~school, ~location, ~details,
+
+  "Expected May 2026",
+  "Bachelor of Arts in Psychology",
   "Wake Forest University",
   "Winston-Salem, NC",
-  "Bachelor of Arts in Psychology",
-  "Expected May 2026",
-  "GPA: 3.69 | Dean’s List",
-  
+  c("GPA: 3.69 | Dean’s List"),
+
+  "Fall 2024",
+  "Study Abroad",
   "Danish Institute for Study Abroad (DIS)",
   "Copenhagen, Denmark",
-  NA,
-  "Fall 2024",
-  "Coursework in well-being psychology and the cognitive psychology of decision-making."
+  c("Coursework in well-being psychology and the cognitive psychology of decision-making.")
 ) %>%
   detailed_entries(
-    with  = with,
-    where = where,
-    what  = what,
-    when  = when,
-    why   = why
+    where = date,
+    with  = degree,
+    what  = paste0(school, " — ", location),
+    why   = details
   )
 ```
 
-# Research Experience
+# RESEARCH EXPERIENCE
 
 ```{r}
 tribble(
-  ~with, ~where, ~when, ~why,
-  
-  "Research Assistant",
-  "Emotional Adaptation & Psychophysiology Lab, Wake Forest University (PI: Christian Waugh, PhD)",
+  ~date, ~position, ~org, ~location, ~details,
+
   "Summer 2025 – Present",
-  "Cleaned, analyzed, and visualized behavioral and survey data in R, Excel, and Qualtrics for reinforcement-learning and emotional reappraisal studies; developed custom R scripts to reconstruct missing log-file data; designed experimental stimuli in Photoshop and trained research assistants; administered affective working-memory protocols and maintained participant tracking logs.",
-  
   "Research Assistant",
-  "Growth Initiative Lab, Wake Forest University (PI: Eranda Jayawickreme, PhD)",
+  "Emotional Adaptation & Psychophysiology Lab, Wake Forest University",
+  "Winston-Salem, NC",
+  c(
+    "PI: Christian Waugh, PhD",
+    "Cleaned, analyzed, and visualized behavioral and survey data using R, Excel, and Qualtrics for a reinforcement-learning study.",
+    "Developed custom R scripts to extract, reconstruct, and validate missing data from raw log files.",
+    "Designed experimental visual stimuli in Adobe Photoshop; created a standardized protocol and trained research assistants to replicate stimuli.",
+    "Administered affective working-memory protocols; maintained participant tracking logs and ensured accurate data upload.",
+    "Monitored and administered surveys to large participant cohorts for an emotional reappraisal study."
+  ),
+
   "Spring 2024 – Present",
-  "Screened interview transcripts and coded themes for a study on pluralism in Sri Lanka; screened ~5,900 articles for a meta-synthesis on post-traumatic growth; applied inclusion/exclusion criteria and maintained structured coding logs.",
-  
   "Research Assistant",
-  "School of Law, Wake Forest University (PI: Gregory Parks, JD, PhD)",
+  "Growth Initiative Lab, Wake Forest University",
+  "Winston-Salem, NC",
+  c(
+    "PI: Eranda Jayawickreme, PhD",
+    "Coded themes and quality-checked interview transcripts for a study on pluralism in Sri Lanka.",
+    "Screened ~5,900 articles for a meta-synthesis on post-traumatic growth and related psychosocial and mental health outcomes.",
+    "Applied inclusion/exclusion criteria and maintained structured coding logs."
+  ),
+
   "Summer 2025 – Fall 2025",
-  "Conducted systematic literature reviews on fraternities, race, and law; co-authored research memos synthesizing findings on bystander intervention and group cohesion."
+  "Research Assistant",
+  "School of Law, Wake Forest University",
+  "Winston-Salem, NC",
+  c(
+    "PI: Gregory Parks, JD, PhD",
+    "Conducted systematic literature reviews on fraternities, race, and law to support book chapter development.",
+    "Co-authored research memos synthesizing findings on bystander intervention and group cohesion."
+  )
 ) %>%
-  detailed_entries(with = with, where = where, when = when, why = why)
+  detailed_entries(
+    where = date,
+    with  = position,
+    what  = paste0(org, " — ", location),
+    why   = details
+  )
 ```
 
-# Relevant Professional Experience
+# RELEVANT PROFESSIONAL EXPERIENCE
 
 ```{r}
 tribble(
-  ~with, ~where, ~when, ~why,
-  
+  ~date, ~position, ~org, ~location, ~details,
+
+  "Fall 2025 – Present",
   "Tutor",
   "Student-Athlete Services, Wake Forest University",
-  "Fall 2025 – Present",
-  "Provided one-on-one philosophy tutoring; supported study strategies, time management, and academic progress monitoring.",
-  
+  "Winston-Salem, NC",
+  c(
+    "Provided one-on-one instruction in philosophy to first-year student-athletes.",
+    "Supported study strategies, time management, and critical thinking; monitored academic progress."
+  ),
+
+  "Spring 2021 – Fall 2024; Summer 2025 – Present",
   "Swim Instructor",
-  "Wake Forest University & Life Time Inc.",
-  "Spring 2021 – Present",
-  "Designed individualized lesson plans; coached youth swim teams and coordinated meets; delivered adaptive instruction for individuals with autism, Down syndrome, cerebral palsy, and behavioral disabilities.",
-  
+  "Life Time Inc.; Wake Forest University",
+  "Atlanta, GA; Winston-Salem, NC",
+  c(
+    "Designed individualized lesson plans and collaborated with clients and families to establish and meet goals.",
+    "Coached youth swim teams; led practices and coordinated swim meets.",
+    "Delivered adaptive instruction for individuals with autism, Down syndrome, cerebral palsy, and behavioral disabilities.",
+    "Maintained a strong focus on safety while communicating effectively with clients, families, and staff."
+  ),
+
+  "Spring 2020 – Fall 2024; Spring 2025 – Present",
   "Lifeguard",
-  "Wake Forest University & Life Time Inc.",
-  "Spring 2020 – Present",
-  "Responded to emergencies and maintained safety protocols; provided professional customer service.",
-  
+  "Life Time Inc.; Wake Forest University",
+  "Atlanta, GA; Winston-Salem, NC",
+  c(
+    "Responded to emergencies in accordance with established facility protocols.",
+    "Managed member check-in and addressed patron questions with professionalism."
+  ),
+
+  "Summer 2024 – Fall 2024",
   "Aquatics Supervisor",
   "Life Time Inc.",
-  "Summer 2024 – Fall 2024",
-  "Supervised and trained 40+ lifeguards and instructors; coordinated scheduling and daily operations."
-) %>%
-  detailed_entries(with = with, where = where, when = when, why = why)
-```
-
-# Awards and Grants
-
-```{r}
-tribble(
-  ~ Year,
-  ~ Name,
-  ~ Institution,
-  ~ Supp,
-  ~ Amount,
-  '2025',
-  'Understanding Takeover Performance in Urgent Situations during Level-3 Driving',
-  'UMTRI & Mcity Integration Fund, University of Michigan',
-  'Role: PI',
-  '$99,971'
+  "Atlanta, GA",
+  c(
+    "Supervised and trained 40+ lifeguards and swim instructors.",
+    "Coordinated staff scheduling and oversaw daily operations across multiple pool decks."
+  )
 ) %>%
   detailed_entries(
-    where = Year,
-    with = Name,
-    what = Institution,
-    why = Supp,
-    when = Amount
-  ) 
+    where = date,
+    with  = position,
+    what  = paste0(org, " — ", location),
+    why   = details
+  )
 ```
 
-## As Postdoc
+# RELEVANT COURSEWORK
+
+```{r}
+bullets(
+  "Psychopharmacology",
+  "Applied Data Science for Psychologists",
+  "Research Methods in Psychology",
+  "Statistics",
+  "Social-Affective Neuroscience",
+  "Psychology of the Military",
+  "Abnormal Psychology",
+  "Research in Cognitive Psychology",
+  "Research in Judgment and Decision-Making",
+  "Contemporary Issues in Psychology",
+  "Personality Psychology",
+  "Psychology of Well-Being",
+  "Philosophy & Psychology",
+  "Philosophy of Human Nature"
+)
+```
+
+# SKILLS
 
 ```{r}
 tribble(
-  ~ Year,
-  ~ Name,
-  ~ Institution,
-  ~ Supp,
-  ~ Amount,
-  '2023',
-  'Probing Attentional Allocation with a Novel Forced-Response Method',
-  'Standard Grant, National Science Foundation',
-  'Role: Key Personnel (Postdoc)',
-  '$659,877',
-  '2023',
-  'Investigating Interference-Control in ADHD Using a Novel Forced-Response Method',
-  'R21, National Institute of Mental Health',
-  'Role: Key Personnel (Postdoc)',
-  '$429,000',
+  ~with, ~what,
+  "Research",  "Human subjects research; IRB protocols; CITI certification; participant tracking; protocol administration; survey administration; Qualtrics; R; SPSS; Zotero; data cleaning and visualization",
+  "Technical", "Microsoft Word, Excel, PowerPoint; Adobe Photoshop",
+  "Language",  "Working knowledge of French"
 ) %>%
-  detailed_entries(
-    where = Year,
-    with = Name,
-    what = Institution,
-    why = Supp,
-    when = Amount
-  ) 
+  detailed_entries(with = with, what = what)
 ```
 
-## As Graduate Student
+# Additional Experience & Hobbies
 
 ```{r}
-tribble(
-  ~Year, ~Name, ~Institution, ~Supp, ~Amount,
-  '2020', 'Stanley E. and Ruth B. Dimond Best Dissertation Award', 'School of Education, University of Michigan', 'Dissertation: Mind-wandering: What Can We Learn from Eye Movements?', '$500',
-  '2020','MPA Graduate Student Paper Award', 'Midwestern Psychological Association Annual Meeting', 'Scan-paths of mind-wandering during real-world scene perception', '$300',
-  '2020', 'ProQuest Distinguished Dissertation Award (Nomination)','School of Education, University of Michigan', NA ,NA,
-  '2019', "Rackham One-Term Dissertation Fellowship", "Rackham Graduate School, University of Michigan",NA,'$17417',
-  '2019', "Rackham Graduate Student Research Grant", "Rackham Graduate School, University of Michigan",NA,'$3000',
-  '2019, 2018, 2017', "Rackham Conference Travel Grant","Rackham Graduate School, University of Michigan",NA,'$1050',
-  '2018', "Rackham Summer Training Award","Rackham Graduate School, University of Michigan",NA,'$3700',
-  '2017, 2015', "Professor & Mrs. Cho-Yee To Travel Grant","School of Education, University of Michigan",NA, '$500'
-) %>% 
-  detailed_entries(
-    where = Year,
-    with = Name, 
-    what = Institution,
-    why = Supp,
-    when = Amount
-  ) 
+bullets(
+  "Advanced yoga practitioner; extensive dance training across multiple styles.",
+  "Competitive swimmer for 10 years; varsity captain; All-American; school record holder; four-time state medalist."
+)
 ```
 
-## As Undergraduate Student
+
+# REFERENCES
 
 ```{r}
+# replace  with real references!!
 tribble(
-  ~Year, ~Name, ~Institution, ~Supp, ~Amount,
-  '2014', "China National Scholarship","Ministry of Education of the People's Republic of China",NA, '$1500',
-  '2014, 2013', "The First Rank Academic Scholarship","Faculty of Psychology, Beijing Normal University",NA,'$300',
-  '2013', "Beijing Student Research and Entrepreneurial Action Plan","Beijing Municipal Commission of Education",NA,'$1500',
-  '2012', "Undergraduate Student Research Grant","Faculty of Psychology, Beijing Normal University",NA,'$280',
-) %>% 
-  detailed_entries(
-    where = Year,
-    with = Name, 
-    what = Institution,
-    why = Supp,
-    when = Amount
-  ) 
-```
-
-# Teaching and Mentoring Experience
-
-# References
-
-```{r}
-tribble(
-  ~ Name,
-  ~ Title,
-  ~ Contact,
-  'John Jonides, Ph.D.',
-  "Edward E. Smith Professor of Psychology and Neuroscience; Co-Director, functional MRI Center, University of Michigan",
-  "jjonides@umich.edu",
-  'Taraz G. Lee, Ph.D.',
-  "Assistant Professor of Psychology, University of Michigan",
-  "tarazlee@umich.edu",
-  'Priti Shah, Ph.D.',
-  "Department Chair, Arthur Thurnau Professor of Psychology, Education, and Information, University of Michigan",
-  "priti@umich.edu",
-  'Kevin F. Miller, Ph.D.',
-  "Professor of Psychology and Education, University of Michigan",
-  "kevinmil@umich.edu"
+  ~Name, ~Title, ~Contact,
+  "Dr. First Last",
+  "Professor of Psychology\nWake Forest University\nResearch Supervisor",
+  "email@wfu.edu"
 ) %>%
-  detailed_entries(where = Contact,
-                   with = Name,
-                   what = Title) 
+  detailed_entries(where = Contact, with = Name, what = Title)
 ```
